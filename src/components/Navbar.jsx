@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import CustomLink from "./CustomLink";
+import { Route, Link, Routes } from "react-router-dom";
 
 let Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -45,10 +46,15 @@ let Navbar = () => {
   );
   return (
     <nav className={`w-full bg-transparent sticky ${visible ? "top-0" : ""} `}>
-      <div className="navbar h-10vh flex justify-between z-50 text-white lg:py-5 px-20 py-4 border-b border-sky-400">
+      <div className="navbar h-10vh flex justify-between z-50 text-white lg:py-5 px-20 py-4 border-sky-400">
         <div className="flex items-center flex-1">
-          <span className="text-3xl font-bold text-sky-400">Adam Doniak</span>
+          <Link to="/spider">
+            <span className="text-3xl font-bold text-sky-400">Adam Doniak</span>
+          </Link>
         </div>
+        <Routes>
+          <Route path="/Spider" element={<Spider />} />
+        </Routes>
         <div className="lg:flex md:flex lg: flex-1 items center justify-end font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mr-16 text-[18px]">
@@ -68,6 +74,11 @@ let Navbar = () => {
       </div>
     </nav>
   );
+  function Spider() {
+    window.location.replace("https://thespidershop.co.uk/");
+
+    return null;
+  }
 };
 
 export default Navbar;

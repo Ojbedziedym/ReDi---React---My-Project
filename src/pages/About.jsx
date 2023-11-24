@@ -1,4 +1,5 @@
 import img from "../assets/styles/about.png";
+import { Route, Link, Routes } from "react-router-dom";
 
 const About = () => {
   return (
@@ -35,14 +36,23 @@ const About = () => {
                 data-aos="fade-right"
                 className="resume-button shadow-xl hover:shadow-sky-800/50  text-white border-2 hover:bg-sky-800 border-sky-800 rounded-lg py-4 px-8 uppercase relative overflow-hidden"
               >
-                Resume
+                <Link to="/ExternLink">Spider attack</Link>
               </button>
             </div>
           </div>
+          <Routes>
+            <Route path="/ExternLink" element={<ExternLink />} />
+          </Routes>
         </div>
       </div>
     </div>
   );
+
+  function ExternLink() {
+    window.location.replace("https://vm.tiktok.com/ZGeesGd5Y/");
+
+    return null;
+  }
 };
 
 export default About;

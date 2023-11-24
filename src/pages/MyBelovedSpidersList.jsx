@@ -13,7 +13,6 @@ import solaris from "../assets/spiders/SpiderList/solaris.jpg";
 import stromka from "../assets/spiders/SpiderList/stromka.jpeg";
 import versi from "../assets/spiders/SpiderList/versi.jpeg";
 import xenesthis from "../assets/spiders/SpiderList/xenesthis.jpeg";
-import "../assets/styles/spiders.css";
 import Spiders from "../components/spiders";
 import FillterSpiders from "../components/FillterSpiders";
 import { useState } from "react";
