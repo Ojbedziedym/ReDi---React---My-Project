@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.glow {
+    transition: all 0.3s ease-in-out;
+}
+.glow:hover {
+    box-shadow: 0 0 25px rgb(71, 127, 206);
+}
+
+.img_glow {
+    box-shadow: 0 0 55px rgb(71, 127, 206);
+}
+
+.resume_button{
+    transform: all 0.3s ease-in-out;
+}
+.resume_button:hover{
+    box-shadow: 0 0 15px rgb(71, 127, 206);
+}
+.button_glow{
+    box-shadow: 0 0 100px rgb(71, 127, 206);
+
+}
+
+
